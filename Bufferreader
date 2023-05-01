@@ -1,0 +1,43 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class Bufferreader {
+  public static void main(String args[]) {
+    try {
+      FileReader fr = new FileReader("data.txt");
+      BufferedReader br = new BufferedReader(fr);
+      String line = null;
+      int num = 0;
+      while ((line = br.readLine()) != null) {
+        System.out.println(line);
+        num++;
+        String words[] = line.split(" ");
+        String longest = " ";
+        String smallest = words[0];
+        for (int i = 0; i < words.length; i++) {
+          String word = words[i];
+          if (words[i].length() > longest.length()) {
+            longest = word;
+          }
+          if (words[i].length() < smallest.length()) {
+            smallest = word;
+          }
+        }
+        FileWriter fw = new FileWriter("report.txt", true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        fw.write("Number of words in line : " + num + " is :" + words.length);
+        fw.write(" ");
+        fw.write("Longest word is : " + longest);
+        fw.write(" ");
+        fw.write("Smallest  word is : " + smallest);
+        fw.write(" ");
+        fw.write("\n");
+        fw.flush();
+      }
+    } catch (Exception e) {
+      System.out.println(e);
+    }
+  }
+}

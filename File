@@ -1,0 +1,49 @@
+import java.io.FileReader;
+import java.io.FileWriter;
+public class File {
+ 
+    public static void main(String[] args) {
+        int dc=0,ac=0,sc=0,spc=0;
+        
+        try {
+        FileReader fr=new FileReader("abc.txt");
+        int i=0;
+        while((i=fr.read())!=-1) {
+            
+        System.out.print((char)i);
+        if((char)i>='a' && (char)i<='z' || (char)i>='A' && (char)i<='Z'){
+            ac++;
+        }
+        else if((char)i=='0' || (char)i=='1' || (char)i=='2' || (char)i=='3' || (char)i=='4' || (char)i=='5' || (char)i=='6' || (char)i=='7' || (char)i=='8' || (char)i=='9'){
+            dc++;
+        }
+        else if((char)i==' '){
+            sc++;
+        }
+        else{
+            spc++;
+        }
+        }
+        
+        }
+        catch(Exception e) {
+            System.out.println(e);
+        }
+        try {
+            FileWriter fr=new FileWriter("abc.txt");
+            frr.write("\nAlpabets : "+ac);
+            frr.write("\nDigits : "+dc);
+            frr.write("\nspaces : "+sc);
+            frr.write("\nSpecial characters : "+spc);
+            frr.flush();
+            }
+            catch(Exception e) {
+                System.out.println(e);
+            }
+        System.out.println("\nAlpabets : "+ac);
+        System.out.println("Digits : "+dc);
+        System.out.println("spaces : "+sc);
+        System.out.println("Special characters : "+spc);
+    }
+ 
+}

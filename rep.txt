@@ -1,0 +1,18 @@
+Frequency of Dont is 1
+Frequency of think is 1
+Frequency of so is 1
+Frequency of just is 1
+Frequency of go is 1
+Frequency of on is 1
+Frequency of the is 1
+Frequency of flow is 1
+Frequency of if is 1
+Frequency of u is 1
+Frequency of can is 1
+Frequency of do is 1
+Frequency of this is 1
+Frequency of work is 1
+
+Most frequent word is Dont and its density is 7
+Second most frequent word is think and its density is 7
+Third most frequent word is so and its density is 7
